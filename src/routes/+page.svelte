@@ -15,7 +15,7 @@
 		<Card.Description>Links voor automatisch updatende kalenders voor toeslagen</Card.Description>
 	</Card.Header>
 	<Card.Content>
-		<Button onclick={() => saveZorgtoeslagCalendar()}>Toeslagen 2024</Button>
+		<Button onclick={() => saveZorgtoeslagCalendar()}>Toeslagen 2025</Button>
 	</Card.Content>
 	<Card.Footer>
 		<a
