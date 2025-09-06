@@ -2,8 +2,10 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { ModeWatcher } from 'mode-watcher';
+	import { injectSpeedInsights } from '@vercel/speed-insights';
 
 	let { children } = $props();
+	injectSpeedInsights();
 </script>
 
 <svelte:head>
