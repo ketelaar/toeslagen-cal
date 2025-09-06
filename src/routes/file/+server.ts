@@ -1,6 +1,13 @@
 import { zorgToeslag } from "$lib/utils/ical";
-import { json } from "@sveltejs/kit";
 
 export function GET() {
-    return json(zorgToeslag())
+    const cal = zorgToeslag()
+
+    return new Response(cal.toString(), {
+        headers: {
+            'Content-Disposition': `attachment; filename=toeslagen.ics`,
+            'Content-Type': 'text/calendar; charset=utf-8',
+        },
+        status: 200
+    })
 }

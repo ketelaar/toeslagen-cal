@@ -1,4 +1,4 @@
-import ical, { ICalCalendarMethod } from 'ical-generator';
+import ical, { ICalCalendarMethod, type ICalEventData } from 'ical-generator';
 
 export function zorgToeslag() {
 	const calendar = ical({ name: 'Kalender voor Zorgtoeslag' });
@@ -7,12 +7,16 @@ export function zorgToeslag() {
 
 	const startTime = new Date();
 
-	calendar.createEvent({
-		start: startTime,
-		end: startTime,
-		allDay: true,
-		summary: 'Uitbetaling zorgtoeslag'
-	});
+	calendar.createEvent(standardToeslagenEventData(startTime));
 
 	return calendar;
+}
+
+function standardToeslagenEventData(day: Date): ICalEventData {
+    return {
+        start: day,
+        end: day,
+        allDay: true,
+        summary: 'Toeslagen'
+    }
 }
