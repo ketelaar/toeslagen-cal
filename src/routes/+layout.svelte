@@ -10,9 +10,10 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Toeslagen ICAL</title>
 </svelte:head>
 
-<ModeWatcher></ModeWatcher>
+<ModeWatcher />
 <div class="flex h-screen w-full items-center justify-center px-4">
 	{@render children?.()}
 </div>

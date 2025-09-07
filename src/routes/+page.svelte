@@ -3,13 +3,15 @@
 	import * as Card from '$lib/components/ui/card/index';
 </script>
 
-<Card.Root class="mx-auto w-full max-w-sm">
+<Card.Root class="mx-auto w-full max-w-sm scale-200">
 	<Card.Header>
-		<Card.Title>Toeslagen ICALs</Card.Title>
-		<Card.Description>Links voor automatisch updatende kalenders voor toeslagen</Card.Description>
+		<Card.Title>Toeslagen ICAL</Card.Title>
+		<Card.Description
+			>Links voor een automatisch updatende kalender met datums voor uitbetaling van toeslagen</Card.Description
+		>
 	</Card.Header>
 	<Card.Content>
-		<Button href="/file">Toeslagen 2025</Button>
+		<Button href="/file">Toeslagen ICAL</Button>
 	</Card.Content>
 	<Card.Footer>
 		<a
