@@ -3,7 +3,7 @@
 	import * as Card from '$lib/components/ui/card/index';
 </script>
 
-<Card.Root class="mx-auto w-full max-w-sm scale-200">
+<Card.Root class="mx-auto w-full max-w-sm md:scale-200">
 	<Card.Header>
 		<Card.Title>Toeslagen ICAL</Card.Title>
 		<Card.Description

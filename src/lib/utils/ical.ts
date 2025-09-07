@@ -6,6 +6,8 @@ export function zorgToeslag() {
 	calendar.method(ICalCalendarMethod.REQUEST);
 
 	const startTime = new Date();
+	const secondDate = new Date();
+	secondDate.setFullYear(2025, 9, 8)
 
 	calendar.createEvent(standardToeslagenEventData(startTime));
 
