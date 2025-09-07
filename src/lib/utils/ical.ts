@@ -13,10 +13,10 @@ export function zorgToeslag() {
 }
 
 function standardToeslagenEventData(day: Date): ICalEventData {
-    return {
-        start: day,
-        end: day,
-        allDay: true,
-        summary: 'Toeslagen'
-    }
+	return {
+		start: day,
+		end: day,
+		allDay: true,
+		summary: 'Toeslagen'
+	};
 }
