@@ -1,5 +1,3 @@
-export const prerender = true;
-
 import { zorgToeslag } from '$lib/utils/ical';
 
 export function GET() {
