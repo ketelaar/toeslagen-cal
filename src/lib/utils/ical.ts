@@ -10,6 +10,7 @@ export function zorgToeslag() {
 	secondDate.setFullYear(2025, 9, 8)
 
 	calendar.createEvent(standardToeslagenEventData(startTime));
+	calendar.createEvent(standardToeslagenEventData(secondDate));
 
 	return calendar;
 }
