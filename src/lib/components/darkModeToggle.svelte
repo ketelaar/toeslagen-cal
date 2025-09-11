@@ -1,4 +1,7 @@
-<!-- from https://www.shadcn-svelte.com/docs/dark-mode/svelte -->
+<!--
+  Adapted from https://www.shadcn-svelte.com/docs/dark-mode/svelte
+  Licensed under the MIT License: https://github.com/shadcn-ui/ui/blob/main/LICENSE.md
+-->
 
 <script lang="ts">
 	import SunIcon from '@lucide/svelte/icons/sun';
