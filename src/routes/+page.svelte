@@ -1,4 +1,5 @@
 <script lang="ts">
+	import DarkModeToggle from '$lib/components/darkModeToggle.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Card from '$lib/components/ui/card/index';
 </script>
@@ -14,6 +15,7 @@
 		<Button href="/file">Toeslagen ICAL</Button>
 	</Card.Content>
 	<Card.Footer>
+		<DarkModeToggle />
 		<a
 			href="https://www.belastingdienst.nl/wps/wcm/connect/nl/toeslagen/content/betaaldatums-toeslagen"
 			class="ml-auto inline-block text-sm underline-offset-4 hover:underline"
