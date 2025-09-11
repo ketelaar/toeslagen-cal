@@ -19,7 +19,7 @@ const toeslagenDates: Date[] = [
 ];
 
 export function constructToeslagenCalendar() {
-	const calendar = ical({ name: 'Kalender voor Zorgtoeslag' });
+	const calendar = ical({ name: 'Toeslagen' });
 
 	calendar.method(ICalCalendarMethod.REQUEST);
 
@@ -35,6 +35,6 @@ function standardToeslagenEventData(day: Date): ICalEventData {
 		start: day,
 		end: day,
 		allDay: true,
-		summary: 'Toeslagen'
+		summary: 'Uitbetaling toeslagen'
 	};
 }
