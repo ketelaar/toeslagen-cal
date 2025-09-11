@@ -1,7 +1,7 @@
-import { zorgToeslag } from '$lib/utils/ical';
+import { constructToeslagenCalendar } from '$lib/utils/ical';
 
 export function GET() {
-	const cal = zorgToeslag();
+	const cal = constructToeslagenCalendar();
 
 	return new Response(cal.toString(), {
 		headers: {
