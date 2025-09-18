@@ -1,5 +1,7 @@
 import { constructToeslagenCalendar } from '$lib/utils/ical';
 
+export const prerender = true;
+
 export function GET() {
 	const cal = constructToeslagenCalendar();
 
