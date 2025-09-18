@@ -8,16 +8,22 @@
 
 	let isPlayingCopyAnimation = $state(false);
 
-	function copyToClipboard() {
+	async function copyToClipboard() {
 		if (isPlayingCopyAnimation) {
 			return;
 		}
 
 		isPlayingCopyAnimation = true;
-		navigator.clipboard.writeText(`${location.origin}/file`);
-		setTimeout(() => {
-			isPlayingCopyAnimation = false;
-		}, 2000);
+		try {
+			await navigator.clipboard.writeText(`${location.origin}/file`);
+		} catch (err) {
+			console.error('Failed to copy to clipboard:', err);
+			// Optionally, show user feedback here
+		} finally {
+			setTimeout(() => {
+				isPlayingCopyAnimation = false;
+			}, 2000);
+		}
 	}
 </script>
 
