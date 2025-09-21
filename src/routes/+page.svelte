@@ -12,7 +12,7 @@
 		>
 	</Card.Header>
 	<Card.Content>
-		<Button href="/file">Toeslagen .ics bestand</Button>
+		<Button href="/toeslagen.ics">Toeslagen .ics bestand</Button>
 	</Card.Content>
 	<Card.Footer>
 		<DarkModeToggle />
