@@ -2,6 +2,29 @@
 	import DarkModeToggle from '$lib/components/darkModeToggle.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Card from '$lib/components/ui/card/index';
+	import Copy from '@lucide/svelte/icons/copy';
+	import Check from '@lucide/svelte/icons/check';
+	import { fade } from 'svelte/transition';
+
+	let isPlayingCopyAnimation = $state(false);
+
+	async function copyToClipboard() {
+		if (isPlayingCopyAnimation) {
+			return;
+		}
+
+		isPlayingCopyAnimation = true;
+		try {
+			await navigator.clipboard.writeText(`${location.origin}/file`);
+		} catch (err) {
+			console.error('Failed to copy to clipboard:', err);
+			// Optionally, show user feedback here
+		} finally {
+			setTimeout(() => {
+				isPlayingCopyAnimation = false;
+			}, 2000);
+		}
+	}
 </script>
 
 <Card.Root class="mx-auto w-full max-w-sm md:scale-200">
@@ -12,7 +35,24 @@
 		>
 	</Card.Header>
 	<Card.Content>
-		<Button href="/toeslagen.ics">Toeslagen .ics bestand</Button>
+		<div class="flex gap-1">
+			<Button variant="secondary" href="/toeslagen.ics">Toeslagen .ics bestand</Button>
+			<Button
+				size="icon"
+				onclick={copyToClipboard}
+				aria-label="Kopieer link voor het .ics bestand naar het klembord"
+			>
+				{#if isPlayingCopyAnimation}
+					<div in:fade>
+						<Check />
+					</div>
+				{:else}
+					<div in:fade>
+						<Copy />
+					</div>
+				{/if}
+			</Button>
+		</div>
 	</Card.Content>
 	<Card.Footer>
 		<DarkModeToggle />
