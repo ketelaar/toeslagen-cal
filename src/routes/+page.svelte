@@ -15,7 +15,7 @@
 
 		isPlayingCopyAnimation = true;
 		try {
-			await navigator.clipboard.writeText(`${location.origin}/file`);
+			await navigator.clipboard.writeText(`${location.origin}/toeslagen.ics`);
 		} catch (err) {
 			console.error('Failed to copy to clipboard:', err);
 			// Optionally, show user feedback here
@@ -36,7 +36,7 @@
 	</Card.Header>
 	<Card.Content>
 		<div class="flex gap-1">
-			<Button variant="secondary" href="/file">Toeslagen .ics bestand</Button>
+			<Button variant="secondary" href="/toeslagen.ics">Toeslagen .ics bestand</Button>
 			<Button
 				size="icon"
 				onclick={copyToClipboard}
