@@ -15,7 +15,7 @@
 
 		isPlayingCopyAnimation = true;
 		try {
-			await navigator.clipboard.writeText(`${location.origin}/file`);
+			await navigator.clipboard.writeText(`${location.origin}/toeslagen.ics`);
 		} catch (err) {
 			console.error('Failed to copy to clipboard:', err);
 			// Optionally, show user feedback here
