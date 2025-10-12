@@ -31,7 +31,7 @@
 	<Card.Header>
 		<Card.Title>Toeslagen ICAL</Card.Title>
 		<Card.Description
-			>Link voor een automatisch updatende kalender met datums voor uitbetaling van toeslagen</Card.Description
+			>Een link voor een kalender die automatisch wordt bijgewerkt en datums voor de uitbetaling van toeslagen bevat.</Card.Description
 		>
 	</Card.Header>
 	<Card.Content>
