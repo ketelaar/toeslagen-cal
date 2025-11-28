@@ -1,22 +1,32 @@
 import ical, { ICalCalendarMethod, type ICalEventData } from 'ical-generator';
 
-const toeslagenDates: Date[] = [
-	// months start at 0
+type ToeslagenYearData = {
+	year: number;
+	days: number[];
+};
 
-	// hour 12 to make it start at the middle of the day
-	new Date(2025, 0, 20, 12),
-	new Date(2025, 1, 20, 12),
-	new Date(2025, 2, 20, 12),
-	new Date(2025, 3, 22, 12),
-	new Date(2025, 4, 20, 12),
-	new Date(2025, 5, 20, 12),
-	new Date(2025, 6, 21, 12),
-	new Date(2025, 7, 20, 12),
-	new Date(2025, 8, 22, 12),
-	new Date(2025, 9, 20, 12),
-	new Date(2025, 10, 20, 12),
-	new Date(2025, 11, 22, 12)
+function datesFor({ year, days }: ToeslagenYearData) {
+	if (days.length != 12) {
+		throw new Error('Days array should have exactly 12 numbers');
+	}
+
+	// months start at 0, so fine to use index here
+	return days.map((day, index) => {
+		// hour 12 to make it start at the middle of the day
+		return new Date(year, index, day, 12);
+	});
+}
+
+const toeslagenData: ToeslagenYearData[] = [
+	{ year: 2025, days: [20, 20, 20, 22, 20, 20, 21, 20, 22, 20, 20, 22] },
+	{ year: 2026, days: [20, 20, 20, 20, 20, 22, 20, 20, 21, 20, 20, 21] }
 ];
+
+const toeslagenDates: Date[] = toeslagenData
+	.map((data) => {
+		return datesFor(data);
+	})
+	.flat();
 
 export function constructToeslagenCalendar() {
 	const calendar = ical({ name: 'Toeslagen' });
