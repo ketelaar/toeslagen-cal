@@ -5,6 +5,7 @@
 	import Copy from '@lucide/svelte/icons/copy';
 	import Check from '@lucide/svelte/icons/check';
 	import { fade } from 'svelte/transition';
+	import AddToCalendarMenu from '$lib/components/AddToCalendarMenu.svelte';
 
 	let isPlayingCopyAnimation = $state(false);
 
@@ -31,12 +32,13 @@
 	<Card.Header>
 		<Card.Title>Toeslagen ICAL</Card.Title>
 		<Card.Description
-			>Een link voor een kalender die automatisch wordt bijgewerkt en datums voor de uitbetaling van toeslagen bevat.</Card.Description
+			>Een link voor een kalender die automatisch wordt bijgewerkt en datums voor de uitbetaling van
+			toeslagen bevat.</Card.Description
 		>
 	</Card.Header>
 	<Card.Content>
 		<div class="flex gap-1">
-			<Button variant="secondary" href="/toeslagen.ics">Toeslagen .ics bestand</Button>
+			<AddToCalendarMenu />
 			<Button
 				size="icon"
 				onclick={copyToClipboard}
