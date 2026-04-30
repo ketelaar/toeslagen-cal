@@ -5,7 +5,7 @@
 	import Copy from '@lucide/svelte/icons/copy';
 	import Check from '@lucide/svelte/icons/check';
 	import { fade } from 'svelte/transition';
-	import AddCalendarDropdown from '$lib/components/addCalendarDropdown.svelte';
+	import AddCalendarDropdown from '$lib/components/AddCalendarDropdown.svelte';
 
 	let isPlayingCopyAnimation = $state(false);
 
