@@ -8,14 +8,14 @@
 		action: () => void;
 	};
 
+	const webcalURI = `webcal://${window.location.hostname}${resolve('/toeslagen.ics')}`;
+
 	function addToAppleAgenda() {
-		console.log('Clicked on Apple Agenda');
+		window.open(webcalURI);
 	}
 
 	function addToGoogleCalendar() {
-		const calendarRoute = encodeURIComponent(
-			`webcal://${window.location.hostname}${resolve('/toeslagen.ics')}`
-		);
+		const calendarRoute = encodeURIComponent(webcalURI);
 		window.open(`https://calendar.google.com/calendar/r?cid=${calendarRoute}`, '_blank');
 	}
 
