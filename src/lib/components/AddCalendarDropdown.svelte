@@ -14,7 +14,7 @@
 
 	function addToGoogleCalendar() {
 		const calendarRoute = encodeURIComponent(
-			`webcal://${window.location.host}${resolve('/toeslagen.ics')}`
+			`webcal://${window.location.hostname}${resolve('/toeslagen.ics')}`
 		);
 		window.open(`https://calendar.google.com/calendar/r?cid=${calendarRoute}`, '_blank');
 	}
