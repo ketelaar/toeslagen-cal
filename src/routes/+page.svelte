@@ -5,6 +5,7 @@
 	import Copy from '@lucide/svelte/icons/copy';
 	import Check from '@lucide/svelte/icons/check';
 	import { fade } from 'svelte/transition';
+	import AddCalendarDropdown from '$lib/components/AddCalendarDropdown.svelte';
 
 	let isPlayingCopyAnimation = $state(false);
 
@@ -36,7 +37,7 @@
 	</Card.Header>
 	<Card.Content>
 		<div class="flex gap-1">
-			<Button variant="secondary" href="/toeslagen.ics">Toeslagen .ics bestand</Button>
+			<AddCalendarDropdown />
 			<Button
 				size="icon"
 				onclick={copyToClipboard}
