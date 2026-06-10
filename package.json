@@ -44,17 +44,10 @@
 		"vite": "^8.0.13",
 		"wrangler": "^4.92.0"
 	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"@tailwindcss/oxide",
-			"esbuild",
-			"sharp",
-			"workerd"
-		]
-	},
 	"dependencies": {
 		"file-saver": "^2.0.5",
 		"ical-generator": "^10.2.0",
 		"mode-watcher": "^1.1.0"
-	}
+	},
+	"packageManager": "pnpm@11.5.3+sha512.7ac1c919341c213a34dc0d02afb7143c5c26ac26ee8c4782deea821b8ac64d2134a081fd8941dae6e29bbb48f58dfc2b7fbceeccc07cb2f09d219d342a4969ed"
 }
