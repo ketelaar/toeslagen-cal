@@ -5,11 +5,13 @@ Site which generates an ICAL containing payment dates for Dutch benefits ("toesl
 ## Development
 
 To run this repo locally, do the following after initially cloning the repo (assuming you have corepack enabled, you do not need to install pnpm yourself)
+
 ```bash
 pnpm install
 ```
 
 And to run the development server do the following
+
 ```bash
 pnpm run dev
 ```
