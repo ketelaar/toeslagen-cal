@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index.js';
+	import * as DropdownMenu from '#lib/components/ui/dropdown-menu/index.js';
 	import Button from './ui/button/button.svelte';
 
 	type OnlineCalendarType = {
@@ -9,7 +9,7 @@
 	};
 
 	function getWebcalURI() {
-		return `webcal://${window.location.host}${resolve('/toeslagen.ics')}`;
+		return `webcal://${window.location.host}${resolve('toeslagen.ics')}`;
 	}
 
 	function addToAppleAgenda() {

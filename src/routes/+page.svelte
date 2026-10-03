@@ -1,11 +1,11 @@
 <script lang="ts">
-	import DarkModeToggle from '$lib/components/darkModeToggle.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import * as Card from '$lib/components/ui/card/index';
+	import DarkModeToggle from '#lib/components/darkModeToggle.svelte';
+	import Button from '#lib/components/ui/button/button.svelte';
+	import * as Card from '#lib/components/ui/card/index.js';
 	import Copy from '@lucide/svelte/icons/copy';
 	import Check from '@lucide/svelte/icons/check';
 	import { fade } from 'svelte/transition';
-	import AddCalendarDropdown from '$lib/components/AddCalendarDropdown.svelte';
+	import AddCalendarDropdown from '#lib/components/AddCalendarDropdown.svelte';
 
 	let isPlayingCopyAnimation = $state(false);
 

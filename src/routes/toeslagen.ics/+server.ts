@@ -1,4 +1,4 @@
-import { constructToeslagenCalendar } from '$lib/utils/ical';
+import { constructToeslagenCalendar } from '#lib/utils/ical.js';
 
 export const prerender = true;
 
